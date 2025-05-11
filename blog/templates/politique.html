@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Politique de confidentialité</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/my_css_style.css' %}" rel="stylesheet">
+        <style>
+            h1,h2 {text-align: center;font-weight: bolder;} 
+        </style>
+    </head>
+    <body>
+        {% include "INCLUSIONS/nav" %}
+        <main style="padding: 2%;"><br><br>
+            <h1>POLITIQUE DE CONFIDENTIALITE</h1><br><br>
+            <h2>INTRODUCTION GENERALE</h2>
+            <p style="text-align: justify;">
+                Bienvenu(e)s chez CAMPUS12! Nous nous engageons à protéger vos données personnelles et à les traiter 
+                avec la plus grande attention. Cette politique de confidentialité explique comment nous collectons, 
+                utilisons et protégeons vos informations personnelles lorsque vous utilisez nos services. Nous 
+                respectons les normes de protection des données personnelles en vigueur et nous ferons notre 
+                possible pour traiter vos données personnelles de manière responsabe et securisée en conformité avec 
+                les règlementations en vigueur. En utilisant nos services,vous acceptez cette politique de confidentiaité 
+                et consentez à la collecte  et à l'utilisation de vos données personnelles commme décrit dans ce document.
+            </p>
+            
+            <h2> COLLECTE ET UTILISATION DES INFORMATIONS </h2> 
+            <p style="text-align: justify;">
+                Lorsque vous utiisez notre site web, nous pouvons collecter des données personneles vous concernant, telles 
+                que votre nom, adresse e-mail et tout autre information additionnelle que vous choisissez de nous fournir. 
+                Nous utilisons ces informations pour gérer votre compte, traiter des paiements, contacter les utiisateurs, 
+                et personnaliser les services que nous offrons.
+                <div>
+                    Nous pouvons également utiliser des outis automatiques de collecte des données pour collecter des 
+                    informations non-personnelles sur votre utiisation de notre site web. Ces informations peuvent inclure 
+                    vos interactions avec notre site web, votre adresse IP, votre navigateur internet  et autre information 
+                    de type technique. 
+                </div>
+            </p>
+
+            <h2>DIVULGATION DES INFORMATIONS</h2>
+            <p style="text-align: justify;"> Nous ne divulguerons pas vos informations personnelles à des tiers, excepté dans les cas suivants:
+                <ul>
+                    <li>Si nous avons votre consentement. </li>
+                    <li>
+                        Si nous sommes tenus de le faire pour nous conformer à une obligation légale ou si cela 
+                        est nécessaire pour protéger vos droits, votre sécurité, ou votre propriété.
+                    </li>
+                    <li>
+                        Si nos services sont effectués de façon indépendante par des tiers, qui doivent également 
+                        adhérer à cette politique de confidentialité.
+                    </li>
+                    <li>
+                        Si nous vendons des informations collectées à des fins commerciales pour lesquelles il n'y 
+                        a pas de lien direct avec les informations qui vous identifient.
+                    </li>
+                
+                </ul> 
+            </p>
+            <h2> SECURITE DES INFOEMATIONS</h2>
+            <p style="text-align: justify;">
+                Nous prenons des mesures de sécurité raisonnables pour protéger vos informations personnelles 
+                contre la perte, l'utilisation abusive, et l'accès non-autorisé, la divulgation, l'altération 
+                ou la destruction. Malgré ces précautions, aucune transmission de données sur Internet ou de 
+                stockage électronique ne peut être garantie à 100 % sécurisée. 
+            </p>
+
+            <h2> VOS CHOIX</h2>
+            <p style="text-align: justify;">
+                Vous pouvez choisir de bloquer les cookies ou de recevoir des alertes lorsque les cookies sont 
+                envoyés à votre ordinateur ou appareil mobile. Pour cela, il vous suffit de rechercher les 
+                paramètres appropriés dans votre navigateur Internet.
+            </p>
+            <h2> MODIFICATION DE CETTE POLITIQUE</h2>
+            <P style="text-align: justify;">
+                Nous nous réservons le droit de modifier cette politique de confidentialité de temps en temps, à 
+                notre discrétion, sans préavis. La version la plus à jour sera toujours accessible sur notre 
+                site web. 
+            </P>
+            {% include 'INCLUSIONS/nous_contacter' %}
+        </main>
+        {% include "INCLUSIONS/footer" %}
+        <!-- MDB -->
+        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+        <!-- Custom scripts -->
+    </body>
+</html>

@@ -1,0 +1,67 @@
+{%load static%}
+<!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-flex align-items-center">
+  <div class="container d-flex justify-content-center justify-content-md-between">
+    <div class="contact-info d-flex align-items-center">
+      <i class="bi bi-envelope-fill"></i><a href="mailto:campus12@googlegroups.com">campus12@googlegroups.com</a>
+      <i class="bi bi-phone-fill phone-icon"></i> +237 672 84 72 77 | +237 654 18 19 32 | +237 692 46 29 83
+    </div>
+    <div class="social-links d-none d-md-block">
+      <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</section>
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+    <img src="{% static 'images/C12-logo.jpg' %}" alt="" style="width: 10%;">
+    <h1 class="logo me-auto"><a href="{% url 'accueil' %}">CAMPUS12</a></h1>
+    
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto" href="{% url 'accueil' %}">Accueil</a></li>
+        <li><a href="{% url 'cours' %}">Cours</a></li>
+        <li class="dropdown"><a href="#"><span>Concours</span><i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="{% url 'epreuve-correction' %}" class="epreuve">Epreuves</a></li>
+            <li><a href="{% url 'correction' %}" class="correction">Corrections</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="{% url 'soutien' %}">Cours de soutien</a></li>
+            <li><a href="{% url 'bord' %}">Obtenir un bord</a></li>
+          </ul>
+        </li>
+        
+        
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        {% if user.is_authenticated %}
+        <li><a class="getstarted scrollto" href="{% url 'logout_blog' %}">Déconnexion</a></li>
+        <li><a class="getstarted scrollto" href="{% url 'dashboard' %}">dashboard</a></li>
+        {% else %}
+        <li><a class="getstarted scrollto" href="{% url 'login_blog' %}">Connexion</a></li>
+        <li><a class="getstarted scrollto" href="{% url 'register_blog' %}">Enregistrement</a></li>
+        {% endif %}
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+  
+  <script lang="javascript">
+    var lien_epreuve=document.getElementsByClassName("epreuve");
+    var lien_correction=document.getElementsByClassName("correction");
+    
+    for(let i=0;i<lien_epreuve.length;i++){
+      lien_epreuve[i].onclick=function(){var lien_e_local=localStorage.setItem("ep-cr","click_on_ep");};
+      lien_correction[i].onclick=function(){var lien_cr_local=localStorage.setItem("ep-cr","click_on_cr");};
+    };
+  </script>
+  
+</header>
+<!-- End Header -->

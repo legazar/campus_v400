@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Epreuves-Corrections</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/my_css_style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        {% include "INCLUSIONS/nav" %}
+        <main> 
+            <h4 style=" margin-left: 8.5%; margin-top: 1.2rem; color:rgb(30, 156, 125); text-align: center;">
+                Faites un clic sur l'intitut dont vous voulez les épreuves</h4>
+            <div class="img_logo_container">
+                {% for img_logo in liste_logos %}
+                    <div class="card" style="width: 13rem; margin: 0.2rem;">
+                        <h5 class="card-title" style="text-align: center;"><a href="{% url 'detail' img_logo.id %}" class="nom_ecole">{{img_logo.titre_ecole}}</a></h5>
+                        <div class="card-body" style="background-color: rgb(30, 156, 125);">
+                            <a href="{% url 'detail' img_logo.id %}" class="img_ecole"><img src="{{img_logo.image.url}}" alt="{{img_logo.titre_ecole}}" style="height: 100%; width: 100%;"></a> 
+                        </div>         
+                    </div>
+                {% endfor %}
+                <br><br>
+            </div><div class="espacement"></div>
+            {% include 'INCLUSIONS/nous_contacter' %}
+        </main>
+        {% include "INCLUSIONS/footer" %}
+        <!-- MDB -->
+        <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+        <!-- Custom scripts -->
+    </body>
+</html>

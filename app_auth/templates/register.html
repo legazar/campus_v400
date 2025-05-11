@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="{% static 'css/style_register.css' %}">
+    
+</head>
+<body>
+    
+    
+    <form action="" method="POST">{% csrf_token %}
+        
+        <h3>Enregistrement</h3>
+
+        {{ form}}
+
+        <button>S'enregistrer</button>
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i> Rafraichir</div>
+            <div class="fb"><i class="fab fa-facebook"></i> <a href=" {% url 'login_blog' %}">Se connecter</a></div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+            <h2 style="text-align: center;padding: 10px;color: red;"> {{message}} </h2> 
+            {% endfor %}
+        {% endif%}
+          
+    </form>
+</body>
+</html>
+

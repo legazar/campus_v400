@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>CAMPUS12</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    {% include 'INCLUSIONS/nav' %}
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url(media/slide/chimie1.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Bienvenue chez <span>CAMPUS12</span></h2>
+                <p class="animate__animated animate__fadeInUp">Plateforme qui vous prépare aux concours de grandes écoles sur toute l'étendue du territoire camerounais.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">lire plus</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background-image: url(media/slide/chimie2.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Le meilleur pour réussir</h2>
+                <p class="animate__animated animate__fadeInUp">Découvrez une grande variéte ordonnée de sujets avec corrections disponibles</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">lire plus</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background-image: url(media/slide/math1.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Cours de preparation disponibles</h2>
+                <p class="animate__animated animate__fadeInUp">Vous avez aussi accès gratuitement à des cours en différentes matières et pouvez si vous le souhaitez obtenir des bords, des cours de soutien en ligne ou en présentiel.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">lire plus</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+      <!-- ======= Featured Services Section ======= -->
+      
+      <section id="featured-services" class="featured-services section-bg">
+        <div class="container">
+
+          <div class="row no-gutters">
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><a href="{% url 'cours' %}"><i class="bi bi-laptop"></i></a></div>
+                <h4 class="title"><a href="{% url 'cours' %}">Cours</a></h4>
+                <p class="description">Découvrez des cours gratuits reférencés par catégorie pour vous permettre de mieux appréhender les sujets</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><a href="{% url 'epreuve-correction' %}" class="epreuve"><i class="bi bi-briefcase"></i></a></div>
+                <h4 class="title"><a href="{% url 'epreuve-correction' %}" class="epreuve">Epreuves de concours</a></h4>
+                <p class="description">Le site met à votre disposition des sujets relatifs à plusieurs écoles du Cameroun</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><a href="{% url 'correction' %}" class="correction"><i class="bi bi-calendar4-week"></i></a></div>
+                <h4 class="title"><a href="{% url 'correction' %}" class="correction">Corrections de sujets</a></h4>
+                <p class="description">Pour tout sujet proposé sur le site, une correction est aussi disponible</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><a href="{% url 'bord' %}"><i class="bi bi-calendar4-week"></i></a></div>
+                <h4 class="title"><a href="{% url 'bord' %}">Obtenir un bord</a></h4>
+                <p class="description">Vous avez la possibilité de commander des supports physiques contenant les cours, sujets et corrections ayant trait à l'école que vous souhaitez intégrer.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><a href="{% url 'soutien' %}"><i class="bi bi-calendar4-week"></i></a></div>
+                <h4 class="title"><a href="{% url 'soutien' %}">Cours de soutient</a></h4>
+                <p class="description">Vous avez des dificultés? Vous voulez être plus compétitif ? Suivez des cours de soutien</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Featured Services Section -->
+
+      <!-- ======= Our Clients Section ======= -->
+      <section id="clients" class="clients">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Quelques unes des écoles les plus connues</h2>
+          </div>
+
+          <div class="clients-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide"><img src="../../media/ens_y.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/enset_d.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/ensp_d.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/ens_b.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/enset_eb.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/ens_m.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/ensp_m.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/ensp_y.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/fmsb_g.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/iut_d.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/iut_bd.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/iut_ng.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/fasa_ds.png" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="../../media/issea_y.png" class="img-fluid" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </section><!-- End Our Clients Section -->
+
+      <!-- ======= Why Us Section ======= -->
+      <section id="why-us" class="why-us">
+        <div class="section-title">
+          <h2> Ici, quelques sujets à notre disposition</h2>
+          <p>Nous vous proposons un large éventail de sujets de concours, uniquement première et troisieme année</p>
+        </div>
+        <div class="container" style="margin: auto;">
+
+          <div class="row no-gutters">
+
+            <div class="col-lg-4 col-md-6 content-item">
+              <span >ENSP DOUALA</span><br>
+              <p>epreuve d'ENSP-DLA 2023</p>
+              <p>epreuve d'ENSP-DLA 2021</p>
+              <p>...</p>
+            </div>
+            <div class="col-lg-4 col-md-6 content-item">
+              <span>IUT DOUALA</span><br>
+              <p>epreuve d'IUT-DLA 2021</p>
+              <p>...</p>
+            </div>
+            <div class="col-lg-4 col-md-6 content-item">
+              <span>ENSP MAROUA</span><br>
+              <p>epreuve d'ENSP-MRA 2021</p>
+              <p>epreuve d'ENSP-MRA 2022</p>
+              <p>...</p>
+            </div>
+            <div class="col-lg-4 col-md-6 content-item">
+              <span>ENS YAOUNDE</span><br>
+              <p>epreuve d'ENS-YDE 2008</p>
+              <p>epreuve d'ENS-YDE 2014</p>
+              <p>...</p>
+            </div>
+            <div class="col-lg-4 col-md-6 content-item">
+              <span>IUT FOTSO VICTOR DE BANDJOUN</span><br>
+              <p>epreuve d'IUT-BDJ 2005</p>
+              <p>...</p>
+              <a href="{% url 'epreuve-correction' %}" class="epreuve">Voir plus</a>
+            </div>
+            
+          </div>
+
+        </div>
+      </section><!-- End Why Us Section -->
+
+      <!-- ======= Contact Section ======= -->
+      {% include 'INCLUSIONS/nous_contacter' %}
+      <!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+          <div class="container">
+    
+            <div class="row">
+              <div class="col-lg-9 text-center text-lg-start">
+                <h3>ACTION DE GRACE</h3>
+                <p> Faites un don à la communauté pour nous encourager dans notre activité.</p>
+              </div>
+              <div class="col-lg-3 cta-btn-container text-center">
+                <a class="cta-btn align-middle" href="#">Faire le don</a>
+              </div>
+            </div>
+    
+          </div>
+        </section><!-- End Cta Section -->
+
+    <!-- ======= Footer ======= -->
+    {% include 'INCLUSIONS/footer' %}
+    <!-- End Footer -->
+
+  </body>
+
+</html>

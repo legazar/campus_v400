@@ -1,0 +1,18 @@
+<!-- voir_epreuve_par_ecole.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Épreuves pour {{ logo_ecole.titre_ecole }}</title>
+</head>
+<body>
+    <h1>Épreuves disponibles pour {{ logo_ecole.titre_ecole }}</h1>
+    <ul>
+        {% for epreuve in epreuves %}
+        <li>
+            {{ epreuve.nom }} - <a href="{% url 'detail' logo_ecole.id epreuve.id %}">Voir les détails</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
