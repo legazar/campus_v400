@@ -141,9 +141,9 @@ def paiement(request,epreuve_id):
     # Initialisez le client Campay avec vos clés d'API
     
     campay = CamPayClient({
-    "app_username" : "NP54kSL91mpOVJqYDNSpMHudPsUprQ68h5RBb79XFfI61nhnErBktg750Iv4SIS-54LoAlX1c4An26MgU0gywg",
-    "app_password" : "POino7zaXCTR03kcLXAITxpnYu4Yd0ZFi4vF8xWE2mtLvYXjZgVSX113Zbuufv-q58_sVzWXUyytkBLbhVjOJA",
-    "environment" : "DEV" #use "DEV" for demo mode or "PROD" for live mode
+    "app_username" : "jYqfrFr7fHgIicuONE4lKBoK0TC1kcfvHgC6RxuQf67YvfqADBVLl9KywQre2pL2FsA8iuCYqi_bvAt7sbMOdA",
+    "app_password" : "vAX-spqPouUH3DLK864_VeWVVDUenha9svkTt-OJjmLOL_TIvFWEfqHmJ8hqZ7TbeorYwyYn36TWM1SuYDYTmw",
+    "environment" : "PROD" #use "DEV" for demo mode or "PROD" for live mode
     })
 
     # Créez le lien de paiement avec les paramètres requis
@@ -154,7 +154,7 @@ def paiement(request,epreuve_id):
     print ( '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', lien2)
 
     payment_link = campay.get_payment_link({
-        "amount": "6",
+        "amount": "100",
         "currency": "XAF",
         "description": "some description",
         "external_reference": "",
@@ -187,9 +187,9 @@ def paiement_correction(request,correction_id):
     # Initialisez le client Campay avec les clés d'API
     
     campay = CamPayClient({
-    "app_username" : "NP54kSL91mpOVJqYDNSpMHudPsUprQ68h5RBb79XFfI61nhnErBktg750Iv4SIS-54LoAlX1c4An26MgU0gywg",
-    "app_password" : "POino7zaXCTR03kcLXAITxpnYu4Yd0ZFi4vF8xWE2mtLvYXjZgVSX113Zbuufv-q58_sVzWXUyytkBLbhVjOJA",
-    "environment" : "DEV" #use "DEV" for demo mode or "PROD" for live mode
+    "app_username" : "jYqfrFr7fHgIicuONE4lKBoK0TC1kcfvHgC6RxuQf67YvfqADBVLl9KywQre2pL2FsA8iuCYqi_bvAt7sbMOdA",
+    "app_password" : "vAX-spqPouUH3DLK864_VeWVVDUenha9svkTt-OJjmLOL_TIvFWEfqHmJ8hqZ7TbeorYwyYn36TWM1SuYDYTmw",
+    "environment" : "PROD" #use "DEV" for demo mode or "PROD" for live mode
     })
 
     # Créez le lien de paiement avec les paramètres requis
@@ -198,7 +198,7 @@ def paiement_correction(request,correction_id):
     lien2 = get_absolute_url (f'correction/telechargement_correction/{ep}/')
     
     payment_link = campay.get_payment_link({
-        "amount": "5",
+        "amount": "300",
         "currency": "XAF",
         "description": "some description",
         "external_reference": "",
